@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render output correctly 1`] = `
+<div>
+  404!
+  <p>
+    <Link
+      replace={false}
+      to="/"
+    >
+      Go back to home.
+    </Link>
+  </p>
+</div>
+`;
