@@ -6,11 +6,11 @@ const publicFolder = path.join(__dirname, 'public');
 module.exports = (env) => { 
   const isProduction = env === 'production';
   const cssExtract = new ExtractTextPlugin('styles.css');
-
+  
   return {
     entry: './src/app.js',
     output: {
-      path: publicFolder,
+      path: path.join(publicFolder, 'dist'),
       filename: 'bundle.js'
     },
     module: {
@@ -45,7 +45,8 @@ module.exports = (env) => {
     devtool: isProduction ? 'source-map' : 'inline-source-map',
     devServer: {
       contentBase: publicFolder,
-      historyApiFallback: true
+      historyApiFallback: true,
+      publicPath: '/dist/'
     }
   };
 }
