@@ -121,6 +121,9 @@ test('should remove an expense from firebase', (done) => {
       type: 'REMOVE_EXPENSE',
       id: expense.id
     });
+    return database.ref(`expenses/${expense.id}`).once('value');
+  }).then((res) => {
+    expect(res.val()).toBeFalsy();
     done();
   });
 });
