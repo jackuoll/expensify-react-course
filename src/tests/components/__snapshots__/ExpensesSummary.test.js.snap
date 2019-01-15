@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test that a single expense renders correctly 1`] = `
+<div>
+  Viewing 
+  1
+   
+  expense
+   totalling 
+  $195.11
+  .
+</div>
+`;
+
+exports[`test that some expenses render correctly 1`] = `
+<div>
+  Viewing 
+  3
+   
+  expenses
+   totalling 
+  $1,335.11
+  .
+</div>
+`;
