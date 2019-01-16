@@ -75,12 +75,3 @@ test('should set expenses', () => {
   const state = expensesReducer(expenses, action);
   expect(state).toEqual([expenses[1]]);
 });
-
-test('should remove an expense', () => {
-  const action = {
-    type: 'REMOVE_EXPENSE',
-    id: expenses[1].id
-  };
-  const state = expensesReducer(expenses, action);
-  expect(state).toEqual([expenses[0], expenses[2]]);
-});
