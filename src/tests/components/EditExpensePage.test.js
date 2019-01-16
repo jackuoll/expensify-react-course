@@ -20,11 +20,11 @@ test('should render EditExpensePage', () => {
 test('should handle editExpense', () => {
   wrapper.find('ExpenseForm').prop('onSubmit')(expense);
   expect(startEditExpense).toHaveBeenLastCalledWith('3', expense);
-  expect(history.push).toHaveBeenLastCalledWith('/');
+  expect(history.push).toHaveBeenLastCalledWith('/dashboard');
 });
 
 test('should handle startRemoveExpense', () => {
   wrapper.find('button').prop('onClick')(expense);
   expect(startRemoveExpense).toHaveBeenLastCalledWith(expense);
-  expect(history.push).toHaveBeenLastCalledWith('/');
+  expect(history.push).toHaveBeenLastCalledWith('/dashboard');
 });
