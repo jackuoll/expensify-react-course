@@ -6,8 +6,8 @@ import LoginPage from './LoginPage'
 
 const ExpenseDashboardPage = () => (
   <div>
-    <ExpenseListFilters />
     <ExpensesSummary />
+    <ExpenseListFilters />
     <ExpenseList /> 
   </div>
 );

@@ -13,7 +13,7 @@ export const ExpensesSummary = (props) => {
   const totalCost = numeral(getExpensesTotal(props.expenses) / 100).format('$0,0.00');
   return (
     <div>
-      Viewing {quantity} {expenseWording} totalling {totalCost}.
+      <h1>Viewing {quantity} {expenseWording} totalling {totalCost}.</h1>
     </div>
   );
 };
