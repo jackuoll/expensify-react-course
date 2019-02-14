@@ -12,7 +12,7 @@ module.exports = (env) => {
   const cssExtract = new ExtractTextPlugin('styles.css');
   
   return {
-    entry: './src/app.js',
+    entry: ['babel-polyfill', './src/app.js'],
     output: {
       path: path.join(publicFolder, 'dist'),
       filename: 'bundle.js'
