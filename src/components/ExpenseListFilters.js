@@ -26,23 +26,37 @@ export class ExpenseListFilters extends React.Component {
   };
   render() {
     return (
-      <div>
-        <input type="text" defaultValue={this.props.filters.text} onChange={this.onTextChange} />
-        <select defaultValue={this.props.filters.sortBy} onChange={this.onSortSelectChange}>
-          <option value="date">Date</option>
-          <option value="amount">Amount</option>
-        </select>
-        <DateRangePicker
-          startDate={this.props.filters.startDate}
-          endDate={this.props.filters.endDate}
-          onDatesChange={this.onDatesChange}
-          focusedInput={this.state.calendarFocused}
-          onFocusChange={this.onFocusChange}
-          showClearDates={false}
-          numberOfMonths={1}
-          isOutsideRange={() => false}
-          minimumNights={0}
-        />
+      <div className="content-container">
+        <div className="input-group">
+          <div className="input-group__item">
+            <input 
+              type="text"
+              className="text-input"
+              defaultValue={this.props.filters.text}
+              placeholder="Search Expenses"
+              onChange={this.onTextChange} 
+            />
+          </div>
+          <div className="input-group__item">
+            <select className="select" defaultValue={this.props.filters.sortBy} onChange={this.onSortSelectChange}>
+              <option value="date">Date</option>
+              <option value="amount">Amount</option>
+            </select>
+          </div>
+          <div className="input-group__item">
+            <DateRangePicker
+              startDate={this.props.filters.startDate}
+              endDate={this.props.filters.endDate}
+              onDatesChange={this.onDatesChange}
+              focusedInput={this.state.calendarFocused}
+              onFocusChange={this.onFocusChange}
+              showClearDates={false}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+              minimumNights={0}
+            />
+          </div>
+        </div>
       </div>
     )
   }
